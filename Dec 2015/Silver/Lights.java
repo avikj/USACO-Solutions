@@ -1,3 +1,7 @@
+/* Solution is currently not efficient enough to pass
+ * all test cases. 
+ * Works for cases 1-6.
+ */ 
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
