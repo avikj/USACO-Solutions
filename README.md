@@ -7,9 +7,9 @@ Currently includes solutions for
     <li>
         December 2015
         <ul>
-            <li>Bronze (1000)</li>
-            <li>Silver (802)</li>
+            <li>Bronze (1000 / 750)</li>
+            <li>Silver (800 / 750)</li>
         </ul>
     </li>
 </ul>
-Format: level (score)
+Format: level (score / minimum passing score)
