@@ -5,41 +5,41 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
-import java.io.PrintWriter;
+import java.io.PrlongWriter;
 public class Lights{
 	static Room[][] rooms;
 	public static void main(String[] args) throws Exception{
 		Scanner in = new Scanner(new File("lightson.in"));
-		int N = in.nextInt();
+		long N = in.nextInt();
 		rooms = new Room[N][N];
-		for(int i = 0; i < N; i++)
-			for (int j = 0; j < N; j++) 
+		for(long i = 0; i < N; i++)
+			for (long j = 0; j < N; j++) 
 				rooms[i][j] = new Room();
 		rooms[0][0].on = true;
-		int M = in.nextInt();
-		for(int i = 0; i < M; i++){
-			int x = in.nextInt()-1;
-			int y = in.nextInt()-1;
-			int a = in.nextInt()-1;
-			int b = in.nextInt()-1;
+		long M = in.nextInt();
+		for(long i = 0; i < M; i++){
+			long x = in.nextInt()-1;
+			long y = in.nextInt()-1;
+			long a = in.nextInt()-1;
+			long b = in.nextInt()-1;
 			rooms[x][y].switches.add(new Coordinate(a, b));
 		}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		while(floodfill(0, 0, new boolean[N][N]));
 	//	floodfill(0, 0, new boolean[N][N]);
-		int result = 0;
-		for (int i = 0; i<rooms.length; i++) {
-			for (int j = 0; j<rooms[i].length; j++) {
+		long result = 0;
+		for (long i = 0; i<rooms.length; i++) {
+			for (long j = 0; j<rooms[i].length; j++) {
 				if(rooms[i][j].on)
 					result++;
 			}
 		}
-		//System.out.println(floodfill(0, 0, new boolean[N][N]).value);
-		PrintWriter out = new PrintWriter("lightson.out");
-		out.print(result);
+		//System.out.prlongln(floodfill(0, 0, new boolean[N][N]).value);
+		PrlongWriter out = new PrlongWriter("lightson.out");
+		out.prlong(result);
 		out.close();
 	}
-	public static boolean floodfill(int x, int y, boolean[][] visited){
+	public static boolean floodfill(long x, long y, boolean[][] visited){
 		boolean result = false;
 		visited[x][y] = true;
 		Room room = rooms[x][y];
@@ -61,9 +61,9 @@ public class Lights{
 	}
 }
 class Coordinate{
-	public int x;
-	public int y;
-	public Coordinate(int a, int b){
+	public long x;
+	public long y;
+	public Coordinate(long a, long b){
 		x=a;
 		y=b;
 	}
