@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 import java.io.PrintWriter;
+
 public class Speeding{
 	public static void main(String[] args) throws Exception{
 		Scanner in = new Scanner(new File("speeding.in"));
